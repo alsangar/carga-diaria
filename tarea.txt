@@ -1,0 +1,26 @@
+# Automatically abort script on errors
+option batch abort
+# Disable overwrite confirmations that conflict with the previous
+option confirm off
+# Connect
+open ftp://usuario:contraseña@direccion_ftp/flog/
+# Change remote directory
+cd /flog
+# Force binary mode transfer
+option transfer binary
+# Download file to the local directory e:\ftplogista
+get *.* e:\ftplogista\tempValladolid\
+#Delete remote files
+rm *.*
+# Disconnect
+close
+# Connect as a different user
+open ftp://usuario:contraseña@direccion_ftp
+# Change the remote directory
+cd /papiro/valladolid/interface
+# Upload the file to current working directory
+put e:\ftplogista\tempValladolid\*.* /papiro/valladolid/interface/
+# Disconnect
+close
+# Exit WinSCP
+exit
