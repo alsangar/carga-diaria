@@ -7,8 +7,8 @@ winscp.com /script=tarea.txt >> tarea.log
 if %ERRORLEVEL% neq 0 goto error
  
 echo %date% %time% - Carga correcta, moviendo ficheros locales >> tarea.log
-echo dir /S /P e:\ftplogista\tempValladolid\*.* >> regitro_valladolid.log
-move e:\ftplogista\tempValladolid\*.* e:\ftplogista\backup\valladolid >> tarea.log
+echo dir /S /P e:\directorio\temp\*.* >> tarea.log
+move e:\directorio\temp\*.* e:\directorio\backup\ >> tarea.log
 echo %date% %time% - Enviando email de notificacion...
 @ECHO OFF
 REM send email from command line via IIS

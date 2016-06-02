@@ -8,8 +8,8 @@ open ftp://usuario:contraseña@direccion_ftp/flog/
 cd /flog
 # Force binary mode transfer
 option transfer binary
-# Download file to the local directory e:\ftplogista
-get *.* e:\ftplogista\tempValladolid\
+# Download file to the local directory e:\directorio
+get *.* e:\directorio\temp\
 #Delete remote files
 rm *.*
 # Disconnect
@@ -19,7 +19,7 @@ open ftp://usuario:contraseña@direccion_ftp
 # Change the remote directory
 cd /papiro/valladolid/interface
 # Upload the file to current working directory
-put e:\ftplogista\tempValladolid\*.* /papiro/valladolid/interface/
+put e:\directorio\temp\*.* /directorio/destino/
 # Disconnect
 close
 # Exit WinSCP
